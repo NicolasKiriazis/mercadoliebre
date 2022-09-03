@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Fuente para todos los textos Roboto */
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo del logo */
+
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+/* Estilo del Navbar */
+
+header {
+    background-color: #EAC926;
+}
+
+nav {
+    /*Centramos el Navbar*/
+    text-align: center;
+}
+
+nav ul {
+    /*Sacamos el estilo a la lista*/
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+
+#cuotas {
+    font-size: 16px;
+    display: inline; /* Lo convertí en inline para que ocupe todo el ancho y usar un salto para que quede bien */
+    margin-bottom: 10px;
+}
+
+.icons{
+    margin-bottom: 10px;
+}
+
+#hamburguer{
+    background-color: #1259c3;
+    color: white;
+    width: 2em;
+    height: 2em;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+/* Estilo del Banner */
+
+.banner-container {
+    text-align: center;
+}
+
+#banner {
+    width: 100%;
+    height: 400px;
+}
+
+/* Estilo Productos */
+
+.product-container {
+    text-align: center;
+}
+
+.product-container ul {
+    list-style: none;
+}
+
+.img {
+    width: 300px;
+    height: 200px;
+}
+
+.name {
+    font-size: 16px;
+}
+
+.price {
+    font-size: 18px;
+    
+}
+
+.sale {
+    font: 16px;
+    color: #39b54a;;
+}
+
+/* Estilo Footer */
+
+#footer-container{
+    text-align: center;
+    margin-top: 25px;
+}
+
+.icons-footer{
+    height: 100px;
+    width: 100px;
+    color: #1259c3;;
+}
+
+.footer-title{
+    font-size: 16px;
+    color: #666;
+}
+
+.footer-text{
+    color: #666;
+}
