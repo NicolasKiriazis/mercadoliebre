@@ -211,13 +211,21 @@ main h2 {
 
 /* ESTILOS REGISTER */
 
-#form-container{
+/* #form-container{
     display: flex;
     flex-direction: column;
+} */
+
+
+.input{
+    width: 80%;
+    height: 50px;
+    margin: 15px;
+    border-radius: 10px;
 }
 
 
-@media (min-width: 361px) {
+@media (min-width: 480px) {
 
     .product img {
         width: 100%;
@@ -430,5 +438,7 @@ main h2 {
         right: 40%;
     }
 
+
+   
 
 }
