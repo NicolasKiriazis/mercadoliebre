@@ -110,6 +110,10 @@ main h2 {
 
 }
 
+.product:hover{
+    box-shadow: 0px 0px 10px black;
+}
+
 .product img {
     width: 50%;
     height: 200px;
@@ -129,6 +133,20 @@ main h2 {
     align-self: flex-start;
     margin-left: 25px;
     margin-top: 15px;
+}
+
+.camion:hover{
+    animation: truck 2s forwards;
+}
+
+/* .product-card i :hover{
+    animation: truck 2s forwards;
+} */
+
+@keyframes truck {
+    100%{
+        transform: rotate(-90deg);
+    }
 }
 
 .price {
@@ -156,16 +174,29 @@ main h2 {
 
 /* Estilo Footer */
 
-/* #footer-container{
+#footer-container{
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin-top: 25px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
+.item-footer{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* .item-footer:hover{
+    background-color: #39b54a;
+} */
 .icons-footer{
-    height: 100px;
-    width: 100px;
-    color: #1259c3;;
+    font-size: 1.5em;
+    color: #1259c3;
+    padding: 5px;
+}
+
+.icons-footer:hover{
+    background-color: #39b54a;
 }
 
 .footer-title{
@@ -175,7 +206,16 @@ main h2 {
 
 .footer-text{
     color: #666;
-} */
+}
+
+
+/* ESTILOS REGISTER */
+
+#form-container{
+    display: flex;
+    flex-direction: column;
+}
+
 
 @media (min-width: 361px) {
 
@@ -311,6 +351,17 @@ main h2 {
         position: relative;
         top: -30px;
         left: 25%;
+
+
+    }
+
+   
+
+    
+
+
+    .product-card .camion :hover{
+        transform: rotate(90deg);
     }
 
     .product-container {
@@ -320,12 +371,22 @@ main h2 {
 
     }
 
+    /* .product-container :hover{
+        
+            box-shadow: 0px 0px 10px rgb(100,100,100);
+            transition: 1s;
+        
+    
+    } */
+    
+
     .product {
         width: 22%;
         height: 334px;
         margin: 5px;
-        box-shadow: 0px 0px 10px rgb(100,100,100);
+        
     }
+    
 
     .price{
         position: relative;
@@ -346,5 +407,28 @@ main h2 {
         top: 20px;
         left: 20px;
     }
+
+    /* Estilos Footer */
+
+    #footer-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .item-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #copy{
+        align-self: flex-end;
+        position: absolute;
+        top: 1500px;
+        right: 40%;
+    }
+
 
 }
