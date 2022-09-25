@@ -298,6 +298,8 @@ h3{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: center;
+
 }
 
 #footer-items{
@@ -305,13 +307,14 @@ h3{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .item-footer {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     margin: 15px;
 
     text-align: center;
@@ -334,10 +337,12 @@ h3{
 .footer-title {
     font-size: 16px;
     color: #666;
+    margin-bottom: 10px;
 }
 
 .footer-text {
     color: #666;
+    text-align: center;
 }
 
 .input {
