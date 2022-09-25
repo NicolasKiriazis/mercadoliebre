@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Link para Css -->
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="css/login.css">
 
     <!-- Link para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
     <!--Título-->
     <title>Mercadoliebre</title>
+
 </head>
 
 <body>
+
     <header>
 
 
@@ -68,72 +70,16 @@
     <main>
         <form action="/">
             <div>
-                <input type="text" name="nombre" placeholder="Nombre y apellido" class="input" required
-                    pattern="[A-Za-z ]{3,40}" title="Ingrese un nombre y apellido validos.">
-                <input type="text" name="nombreUsuario" placeholder="Nombre de usuario" class="input" required
-                    pattern="[A-Za-z0-9]{3,20}" title="Letras y números. Tamaño mínimo: 3">
-                <input type="email" name="email" placeholder="E-mail" class="input" required
-                    pattern="[A-Za-z0-9@{3,30}">
-            </div>
-            <div>
-                <label for="nacimiento" class="subtit">Fecha de nacimiento</label>
-                <input type="date" name="nacimiento" class="input" id="nacimiento">
-                <br>
-                <p class="subtit">Domicilio</p>
-                <br>
-                <input type="text" name="domicilio" placeholder="Domicilio" class="input">
-            </div>
-            <div>
-                <p class="subtit">Perfil de usuario</p>
-            </div>
-            <div class="perfil">
-                <label for="comprador">Comprador</label>
-                <input type="radio" name="perfil" value="comprador" id="comprador">
-                <label for="vendedor">Vendedor</label>
-                <input type="radio" name="perfil" value="vendedor" id="vendedor">
-            </div>
-            <div>
-                <p class="subtit">Intereses</p>
-            </div>
-            <div class="intereses">
-                <div>
-                    <input type="checkbox" name="intereses" value="electro" id="electro">
-                    <label for="electro">Electro</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="intereses" value="moda" id="moda">
-                    <label for="moda">Moda</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="intereses" value="hogar" id="hogar">
-                    <label for="hogar">Hogar</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="intereses" value="jugueteria" id="jugueteria">
-                    <label for="jugueteria">Jugueteria</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="intereses" value="vidaSana" id="vidaSana">
-                    <label for="vidaSana">Vida Sana</label>
-                </div>
-            </div>
-            <div>
-                <label for="avatar" class="subtit">Foto de usuario</label>
-                <input type="file" accept=".jpg .png" name="avatar" id="avatar">
-            </div>
-            <div>
-                <p class="subtit">Contraseña</p>
-                <br>
+                <input type="text" name="nombreUsuario" placeholder="Nombre de usuario" class="input" required pattern="[A-Za-z0-9]{3,20}" title="Letras y números. Tamaño mínimo: 3">         
                 <input type="password" name="password" id="password" placeholder="Contraseña" minlength="5" required>
-                <input type="password" name="passwordConf" id="passwordConf" placeholder="Confirmar contraseña"
-                    minlength="5" required>
             </div>
             <div class="botones">
-                <input value=" Enviar " type="submit">
-                <input type="reset" value=" Borrar " />
+                <input value=" Entrar " type="submit">
             </div>
+
         </form>
     </main>
+
     <footer>
 
         <div id="footer-container">
@@ -176,6 +122,8 @@
             </div>
 
         </div>
+    </footer>
+    
 </body>
 
 </html>

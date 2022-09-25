@@ -4,67 +4,112 @@
 
 * {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-/* Estilo del logo */
-
-.logo-container {
-    text-align: center;
-}
-
-
-.logo {
-    width: 50%;
-    height: 200px;
-}
-
-/* Estilo del Navbar */
-
 header {
     background-color: #EAC926;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
-nav {
-    /*Centramos el Navbar*/
-    text-align: center;
+#logo-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    flex-grow: 50%;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+
 }
 
-nav ul {
-    /*Sacamos el estilo a la lista*/
+#logo-container img {
+
+    height: 40px;
+    flex-grow: 50%;
+
+
+}
+
+#search-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin-left: 10px;
+
+    flex-grow: 50%;
+
+}
+
+#search-container input {
+    flex-grow: 80%;
+
+    height: 25px;
+
+    border: 0px solid;
+    border-radius: 5px;
+}
+
+#search-container i {
+    flex-grow: 20%;
+    position: relative;
+    font-size: 15px;
+    height: 18px;
+    margin-left: 2px;
+    top: 5px;
+    right: 10%;
+    background-color: #ffff;
+}
+
+/* Estilo de Navbar */
+
+nav{
+    display: none;
+}
+
+.navbar-container{
     list-style: none;
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-nav ul a {
-    text-decoration: none;
-    color: black;
+.burguer-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-
-#cuotas {
-    font-size: 16px;
-    display: inline;
-    /* Lo convertí en inline para que ocupe todo el ancho y usar un salto para que quede bien */
-    margin-bottom: 10px;
-}
-
-.icons {
-    margin-bottom: 10px;
-}
-
-#hamburguer {
-
+.burguer-menu i{
+    font-size: 1.5em;
+    color: #ffff;
     background-color: #1259c3;
-    font-size: 1em;
-    color: white;
-    border-radius: 2px;
-    padding: 5px;
-
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 /* Estilo de Main*/
+
+#banner{
+    width: 90%;
+    height: 150px;
+    margin-bottom: 15px;
+}
 
 main {
 
@@ -75,21 +120,20 @@ main {
     /*-----------------*/
 
     /*Convertimos al Main en un elemento de Flex*/
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     /*------------------------------------------*/
 
     background-color: #ebebeb;
 }
 
-main h2 {
-    margin: 10px;
-}
 
 /* Estilo del Banner */
 
-.banner-container {
+/* .banner-container {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -98,15 +142,36 @@ main h2 {
 #banner {
     width: 100%;
     height: 150px;
+} */
+
+h3{
+    font-size: 24px;
+    margin: 15px;
 }
 
 /* Estilo Productos */
 
+.products-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+
+}
+
 .product {
-    margin-top: 5px;
-    margin-bottom: 25px;
-    height: 400px;
-    background-color: white;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    width: 90%;
+    background-color: #ffff;
+
+    margin-bottom: 15px;
 
 }
 
@@ -114,331 +179,324 @@ main h2 {
     box-shadow: 0px 0px 10px black;
 }
 
+/* .product:hover{
+    box-shadow: 0px 0px 10px black;
+} */
+
 .product img {
-    width: 50%;
-    height: 200px;
-    margin: 0;
+
+    width: 100%;
+
 }
 
 .product-card {
-    background-color: white;
+
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+
     border-top: solid 1px #ebebeb;
+
 }
 
-.product-card .camion {
-    font-size: 0.90em;
+.card-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+
+    margin: 15px;
+}
+
+.price-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* align-items: center;
+    align-items: flex-start; */
+    justify-content: flex-start;
+
+
+    width: 100%;
+
+}
+
+/* ESTILO FUENTES E ÍCONOS */
+
+.price {
+    flex-grow: 70%;
+
+    font-size: 18px;
+    
+}
+
+.sale {
+    flex-grow: 30%;
+
+    font-size: 16px;
     color: #39b54a;
-    align-self: flex-start;
-    margin-left: 25px;
-    margin-top: 15px;
+
+    margin-left: 10px;
+    margin-top: 16px;
 }
 
-.camion:hover{
-    animation: truck 2s forwards;
+.title {
+
+    font-size: 16px;
+
+    visibility: hidden;
+
 }
 
-/* .product-card i :hover{
+.card-container i {
+
+    color: #39b54a;
+
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #ffff;
+    border-radius: 50%;
+    margin-bottom: 5px;
+
+
+    display: block;
+    font-size: 16px;
+    position: relative;
+    right: -75%;
+    top: -30px;
+
+}
+
+
+
+.card-container i:hover{
     animation: truck 2s forwards;
-} */
+} 
+
+
 
 @keyframes truck {
-    100%{
+    100% {
         transform: rotate(-90deg);
     }
 }
 
-.price {
-    font-size: 18px;
-    align-self: flex-start;
-    margin-left: 20px;
-    margin-top: 15px;
-}
 
-.sale {
-    font-size: 18px;
-    color: #39b54a;
-    align-self: flex-start;
-    margin-left: 20px;
-}
-
-/* .camion{
-    
-} */
-
-/* .product-container{
-    display: flex;
-    flex-direction: column;
-} */
 
 /* Estilo Footer */
 
-#footer-container{
+#footer-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+}
+
+#footer-items{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+
     text-align: center;
-    margin-top: 15px;
+
+    width: 27%;
 }
 
-.item-footer{
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
 
-/* .item-footer:hover{
-    background-color: #39b54a;
-} */
-.icons-footer{
+.icons-footer {
     font-size: 1.5em;
     color: #1259c3;
     padding: 5px;
+    margin-bottom: 10px;
 }
 
-.icons-footer:hover{
-    background-color: #39b54a;
+.icons-footer:hover {
+    color: lightblue;
 }
 
-.footer-title{
+.footer-title {
     font-size: 16px;
     color: #666;
 }
 
-.footer-text{
+.footer-text {
     color: #666;
 }
 
-
-/* ESTILOS REGISTER */
-
-/* #form-container{
-    display: flex;
-    flex-direction: column;
-} */
-
-
-.input{
+.input {
     width: 80%;
     height: 50px;
     margin: 15px;
     border-radius: 10px;
 }
 
+@media (min-width: 361px) {
+    /* .product {
+        box-shadow: 0px 0px 10px black
+    } */
+
+    .card-container i {
+        right: -82%;
+    }
+}
+
 
 @media (min-width: 480px) {
-
-    .product img {
-        width: 100%;
-        height: 300px;
+    nav{
+        display: none;
     }
 
-    #nav-text-container {
-        visibility: hidden;
+    #banner{
+        height: 200px;
     }
-
-    .name {
-        visibility: hidden;
-    }
-
 }
+
 
 @media (min-width: 769px) {
 
-    header{
-        display: flex;
-        height: 200px;
-        
-    }
-
-    .logo-container{
-        display: flex;
-        position: relative;
-        top: -50px;
-        left: 60px;
-    }
-    .logo{
-        width: 30%;
-        height: 250px;
-        position:relative;
-        top: 2px;
-        
-    }
-
-    /* #nav-text-container{
-        display: flex;
-        
-    } */
-
-    /* nav div ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        position: absolute;
-        top: 22%;
-        right: 60%;
-    } */
-
-    #nav-options{
-        display: flex;
-        justify-content: space-around;
-        position: absolute;
-        top: 23%;
-        right: 75%;
-    }
-
-    nav div ul li{
-        margin-left: 15px;
-    }
-
-    #login-options{
-        display: flex;
-        justify-content: space-around;
-        position: absolute;
-        top: 23%;
-        right: 5%;
-        
-    }
-
-    #search-options{
-
-        display: flex;
-        justify-content: space-around;
-        position: absolute;
-        top: 10%;
-        right: 30%;
-        
-    }
-
-    .cuotas{
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-
-    
-
-
-    /* ESTILOS DEL MAIN DESKTOP */
-    main {
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    #hamburguer {
-        visibility: hidden;
-    }
-
-    #banner {
-        height: 340px;
-    }
-
-    #nav-text-container {
+    .title{
         visibility: visible;
     }
 
-    .product img {
-        width: 232px;
-        height: 236px;
-    }
-
-    .product-card {
+    header{
         flex-direction: row;
+        justify-content: center;
         justify-content: space-around;
-        flex-wrap: wrap;
     }
 
-    .product-card .camion {
-        font-size: 1em;
-        color: #39b54a;
-        align-self: flex-start;
+    nav{
+        width: 100%;
 
-        border: solid 2px #ebebeb;
-        border-radius: 100%;
-        padding: 5px;
-
-        position: relative;
-        top: -30px;
-        left: 25%;
-
-
-    }
-
-   
-
-    
-
-
-    .product-card .camion :hover{
-        transform: rotate(90deg);
-    }
-
-    .product-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
 
+        margin-bottom: 15px;
     }
 
-    /* .product-container :hover{
+    #navbar-container-1{
+
+
+        list-style: none;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        justify-content: center;
+        justify-content: space-around;
+
+        width: 50%;
+
+        margin: 0;
         
-            box-shadow: 0px 0px 10px rgb(100,100,100);
-            transition: 1s;
-        
-    
-    } */
-    
+    }
+
+    #navbar-container-2{
+
+        list-style: none;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-end;
+        justify-content: space-around;
+
+        width: 50%;
+        left: 1%;
+        margin: 0;
+    }
+
+    li{
+        padding: 5px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+
+    #logo-container{
+        width: 50%;
+        height: 150px;
+        justify-content: center;
+        justify-content: space-between;
+    }
+
+    #logo-container img{
+        height: 70px;
+        width: 40%;
+    }
+
+    #search-container{
+        width: 40%;
+        justify-content: center;
+    }
+
+    #search-container input{
+        width: 80%;
+    }
+
+    .burguer-menu{
+        display: none;
+    }
+
+    #banner{
+        height: 350px;
+    }
+
+    .products-container {
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-around;
+    }
+
+    .product {
+        width: 35%;
+        height: 25%;
+    }
+
+    .card-container i {
+        right: -75%;
+    }
+
+    /*ESTILO FOOTER*/
+
+    #footer-items{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+}
+
+@media (min-width: 1025px) {
 
     .product {
         width: 22%;
-        height: 334px;
-        margin: 5px;
-        
-    }
-    
-
-    .price{
-        position: relative;
-        right: 70%;
+        height: 25%;
     }
 
-    .sale{
-        position: relative;
-        bottom: 30px;
-        left: -10%;
+    .card-container i {
+        right: -75%;
     }
-
-    .name {
-        visibility: visible;
-        align-self: flex-end;
-        order: -1;
-        position: relative;
-        top: 20px;
-        left: 20px;
-    }
-
-    /* Estilos Footer */
-
-    #footer-container{
-        display: flex;
-        flex-direction: row;
-    }
-
-
-    .item-footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #copy{
-        align-self: flex-end;
-        position: absolute;
-        top: 1500px;
-        right: 40%;
-    }
-
-
-   
 
 }

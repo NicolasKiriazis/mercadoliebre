@@ -16,6 +16,16 @@ app.get("/", function (req, res) {
     res.sendFile(ruta)
 })
 
-app.get("/register", function (req, res) {
+// app.get("/register", function (req, res) {
+//     let ruta2 = path.resolve(__dirname, './views/register.html')
+
+//     res.sendFile(path.resolve(ruta2))
+// })
+
+app.get("/register", function(req, res){
     res.sendFile(path.resolve(__dirname, './views/register.html'))
+})
+
+app.get("/login", function(req, res){
+    res.sendFile(path.resolve(__dirname, './views/login.html'))
 })
